@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culinary Theater - Where Each Dish Tells a Story</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pearl-mist': '#F8F8FF',
+                        'midnight-elegance': '#1C1C1E',
+                        'crimson-fire': '#DC143C',
+                        'copper-accent': '#B87333',
+                        'golden-harvest': '#FFD700'
+                    },
+                    fontFamily: {
+                        'serif': ['Georgia', 'Times New Roman', 'serif'],
+                        'sans': ['Inter', 'Arial', 'sans-serif']
+                    }
+                }
+            },
+            darkMode: 'class'
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-pearl-mist dark:bg-midnight-elegance text-midnight-elegance dark:text-pearl-mist transition-colors duration-300">
+    
+    <!-- Header with Glassmorphism -->
+    <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-lg bg-white/50 dark:bg-black/30 border-b border-white/20 dark:border-gray-800/30">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="text-2xl font-serif font-bold text-crimson-fire">
+                    Culinary Theater
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link font-medium hover:text-crimson-fire transition-colors duration-200 relative">Home</a>
+                    <a href="menu.html" class="nav-link font-medium hover:text-crimson-fire transition-colors duration-200">Menu</a>
+                    <a href="story.html" class="nav-link font-medium hover:text-crimson-fire transition-colors duration-200">Our Story</a>
+                    <a href="reservations.html" class="nav-link font-medium hover:text-crimson-fire transition-colors duration-200">Reservations</a>
+                    <a href="contact.html" class="nav-link font-medium hover:text-crimson-fire transition-colors duration-200">Contact</a>
+                </div>
+                
+                <!-- Theme Toggle & Mobile Menu Button -->
+                <div class="flex items-center space-x-4">
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-white/20 dark:bg-gray-800/30 backdrop-blur-sm hover:bg-white/30 dark:hover:bg-gray-700/40 transition-all duration-200">
+                        <svg id="sun-icon" class="w-5 h-5 text-yellow-500 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd" />
+                        </svg>
+                        <svg id="moon-icon" class="w-5 h-5 text-gray-700 block dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+                        </svg>
+                    </button>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg bg-white/20 dark:bg-gray-800/30 backdrop-blur-sm hover:bg-white/30 dark:hover:bg-gray-700/40 transition-all duration-200">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-white/20 dark:border-gray-800/30">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="index.html" class="nav-link font-medium hover:text-crimson-fire transition-colors duration-200">Home</a>
+                    <a href="menu.html" class="nav-link font-medium hover:text-crimson-fire transition-colors duration-200">Menu</a>
+                    <a href="story.html" class="nav-link font-medium hover:text-crimson-fire transition-colors duration-200">Our Story</a>
+                    <a href="reservations.html" class="nav-link font-medium hover:text-crimson-fire transition-colors duration-200">Reservations</a>
+                    <a href="contact.html" class="nav-link font-medium hover:text-crimson-fire transition-colors duration-200">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+            <!-- Background Image -->
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" 
+                     alt="Luxury restaurant interior" 
+                     class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black/40 dark:bg-black/60"></div>
+            </div>
+            
+            <!-- Hero Content -->
+            <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+                <!-- Glassmorphism Card -->
+                <div class="backdrop-blur-lg bg-white/10 dark:bg-black/20 border border-white/20 dark:border-gray-800/30 rounded-3xl p-8 md:p-12 shadow-2xl">
+                    <!-- Animated Title -->
+                    <h1 class="text-5xl md:text-7xl font-serif font-bold text-white mb-6 animate-fade-in-up">
+                        Culinary Theater
+                    </h1>
+                    
+                    <!-- Tagline -->
+                    <p class="text-xl md:text-2xl text-white/90 mb-8 font-light animate-fade-in-up animation-delay-200">
+                        Where each dish tells a story
+                    </p>
+                    
+                    <!-- Call to Action -->
+                    <div class="space-y-4 animate-fade-in-up animation-delay-400">
+                        <a href="reservations.html" 
+                           class="inline-block bg-crimson-fire hover:bg-red-700 text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+                            Reserve Your Table
+                        </a>
+                        <p class="text-white/70 text-sm">
+                            Experience culinary artistry like never before
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <div class="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
+                    <div class="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-midnight-elegance dark:bg-black text-pearl-mist py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Brand -->
+                <div class="text-center md:text-left">
+                    <h3 class="text-2xl font-serif font-bold text-crimson-fire mb-4">Culinary Theater</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        An extraordinary dining experience where culinary artistry meets theatrical presentation.
+                    </p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="text-center">
+                    <h4 class="text-lg font-semibold mb-4 text-copper-accent dark:text-golden-harvest">Quick Links</h4>
+                    <div class="space-y-2">
+                        <a href="menu.html" class="block hover:text-crimson-fire transition-colors duration-200">Menu</a>
+                        <a href="story.html" class="block hover:text-crimson-fire transition-colors duration-200">Our Story</a>
+                        <a href="reservations.html" class="block hover:text-crimson-fire transition-colors duration-200">Reservations</a>
+                        <a href="contact.html" class="block hover:text-crimson-fire transition-colors duration-200">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- Social Media -->
+                <div class="text-center md:text-right">
+                    <h4 class="text-lg font-semibold mb-4 text-copper-accent dark:text-golden-harvest">Follow Us</h4>
+                    <div class="flex justify-center md:justify-end space-x-4">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-crimson-fire transition-colors duration-200">
+                            <span class="sr-only">Instagram</span>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.621 5.367 11.988 11.988 11.988s11.987-5.367 11.987-11.988C24.004 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.326-1.297s-1.297-2.029-1.297-3.326.49-2.448 1.297-3.326 2.029-1.297 3.326-1.297 2.448.49 3.326 1.297 1.297 2.029 1.297 3.326-.49 2.448-1.297 3.326-2.029 1.297-3.326 1.297z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-crimson-fire transition-colors duration-200">
+                            <span class="sr-only">Facebook</span>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Culinary Theater. All rights reserved. | Designed for exceptional dining experiences.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Custom animations
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fade-in-up {
+                0% {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            
+            .animate-fade-in-up {
+                animation: fade-in-up 1s ease-out forwards;
+                opacity: 0;
+            }
+            
+            .animation-delay-200 {
+                animation-delay: 0.2s;
+            }
+            
+            .animation-delay-400 {
+                animation-delay: 0.4s;
+            }
+            
+            .nav-link.active {
+                color: #DC143C;
+                position: relative;
+            }
+            
+            .nav-link.active::after {
+                content: '';
+                position: absolute;
+                bottom: -4px;
+                left: 0;
+                right: 0;
+                height: 2px;
+                background-color: #DC143C;
+                border-radius: 1px;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
