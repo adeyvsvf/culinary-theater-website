@@ -27,7 +27,7 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body class="bg-pearl-mist dark:bg-midnight-elegance text-midnight-elegance dark:text-pearl-mist transition-colors duration-300">
     
@@ -87,10 +87,12 @@
         <!-- Hero Section -->
         <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
             <!-- Background Image -->
-            <div class="absolute inset-0 z-0">
-                <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
-                     alt="Theatrical fine dining interior with dramatic lighting" 
-                     class="w-full h-full object-cover">
+            <div class="absolute inset-0 z-0 hero-background">
+                <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                     alt="Elegant fine dining restaurant interior with dramatic lighting" 
+                     class="w-full h-full object-cover"
+                     style="object-position: center center;"
+                     loading="eager">
                 <div class="absolute inset-0 bg-black/40 dark:bg-black/60"></div>
             </div>
             
@@ -99,12 +101,12 @@
                 <!-- Glassmorphism Card -->
                 <div class="backdrop-blur-lg bg-white/10 dark:bg-black/20 border border-white/20 dark:border-gray-800/30 rounded-3xl p-8 md:p-12 shadow-2xl">
                     <!-- Animated Title -->
-                    <h1 class="text-5xl md:text-7xl font-serif font-bold text-white mb-6 animate-fade-in-up">
+                    <h1 class="text-5xl md:text-7xl font-serif font-bold text-white mb-6 animate-fade-in-up" style="font-family: 'Playfair Display', 'Georgia', serif; font-weight: 700; letter-spacing: 0.02em;">
                         Culinary Theater
                     </h1>
                     
                     <!-- Tagline -->
-                    <p class="text-xl md:text-2xl text-white/90 mb-8 font-light animate-fade-in-up animation-delay-200">
+                    <p class="text-xl md:text-2xl text-white/90 mb-8 animate-fade-in-up animation-delay-200" style="font-family: 'Dancing Script', cursive; font-weight: 400; font-style: italic;">
                         An Immersive Dining Performance
                     </p>
                     
@@ -145,8 +147,8 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <!-- Feature 1 -->
                     <div class="text-center group">
-                        <div class="w-20 h-20 rounded-full overflow-hidden mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                        <div class="w-40 h-40 rounded-2xl overflow-hidden mx-auto mb-6 group-hover:scale-105 transition-transform duration-300 shadow-xl">
+                            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
                                  alt="Award-winning gourmet dish" 
                                  class="w-full h-full object-cover">
                         </div>
@@ -158,8 +160,8 @@
                     
                     <!-- Feature 2 -->
                     <div class="text-center group">
-                        <div class="w-20 h-20 rounded-full overflow-hidden mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                            <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                        <div class="w-40 h-40 rounded-2xl overflow-hidden mx-auto mb-6 group-hover:scale-105 transition-transform duration-300 shadow-xl">
+                            <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
                                  alt="Theatrical food presentation with flames" 
                                  class="w-full h-full object-cover">
                         </div>
@@ -171,8 +173,8 @@
                     
                     <!-- Feature 3 -->
                     <div class="text-center group">
-                        <div class="w-20 h-20 rounded-full overflow-hidden mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                            <img src="https://images.unsplash.com/photo-1421622548261-c45bfe178854?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                        <div class="w-40 h-40 rounded-2xl overflow-hidden mx-auto mb-6 group-hover:scale-105 transition-transform duration-300 shadow-xl">
+                            <img src="https://images.unsplash.com/photo-1421622548261-c45bfe178854?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
                                  alt="Intimate candlelit dining atmosphere" 
                                  class="w-full h-full object-cover">
                         </div>
@@ -616,6 +618,14 @@
         // Custom animations
         const style = document.createElement('style');
         style.textContent = `
+            /* Hero section backup styling */
+            .hero-background {
+                background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            
             @keyframes fade-in-up {
                 0% {
                     opacity: 0;
