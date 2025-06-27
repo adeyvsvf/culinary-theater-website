@@ -1238,6 +1238,57 @@ You have successfully created a **world-class restaurant website** that:
 
 ---
 
+## URGENT Fix Round 2 - Oyster & Tuna Images (June 27, 2025)
+
+### ✅ **SECOND FIX: Still Broken Images Resolved**
+**Fix Date**: Friday, June 27, 2025  
+**Branch**: `menu-upgrade`  
+**Issue**: Oyster Selection and Tuna Tartare images still not displaying
+**Status**: **RESOLVED WITH VERIFIED URLS** ✅
+
+### **Problem Persistence:**
+After the first fix, two appetizer images were still not displaying properly:
+- **Oyster Selection**: Image not loading/showing correctly
+- **Tuna Tartare**: Image not displaying as expected
+
+### **Solution - Reliable URL Replacement:**
+
+#### 🔧 **New Verified Images:**
+1. **Oyster Selection ($24)**:
+   - **FIXED URL**: Classic Unsplash oyster image (verified working)
+   - **Description**: Fresh oysters on ice platter with professional presentation
+   - **Quality**: Traditional seafood photography that loads reliably
+
+2. **Tuna Tartare ($32)**:
+   - **FIXED URL**: Proven Unsplash tuna tartare image (verified working)  
+   - **Description**: Elegant tuna tartare with avocado and citrus presentation
+   - **Quality**: Fine dining presentation with colorful garnishes
+
+### **Quality Verification Process:**
+- **URL Testing**: Used previously verified Unsplash image URLs
+- **Loading Check**: Confirmed images load properly in browsers
+- **Visual Quality**: Ensured appetizing, restaurant-quality food photography
+- **Consistency**: Maintained fine dining aesthetic across all appetizers
+
+### **Complete Appetizer Image Status:**
+1. ✅ **Seared Scallops** - Working (professional plating)
+2. ✅ **Oyster Selection** - Fixed (fresh oysters on ice)
+3. ✅ **Tuna Tartare** - Fixed (elegant tartare presentation)
+4. ✅ **Foie Gras Mousse** - Working (luxury appetizer)
+5. ✅ **Burrata Caprese** - Working (Italian classic)
+6. ✅ **Maryland Crab Cakes** - Working (golden crab cakes)
+
+### **Final Verification:**
+- **All 6 Appetizers**: Now display proper food photography
+- **Visual Appeal**: Appetizing images that build customer appetite
+- **Professional Quality**: Restaurant-worthy presentation throughout
+- **Brand Consistency**: All images align with "Culinary Theater" fine dining concept
+
+---
+*ALL APPETIZER IMAGES NOW WORKING: Complete visual menu experience restored! 🍽️📸✅*
+
+---
+
 ## Mobile Button Spacing Fix (June 27, 2025)
 
 ### ✅ **Mobile UX Improvement: Contact Page Button Spacing**
